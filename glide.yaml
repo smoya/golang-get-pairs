@@ -1,0 +1,6 @@
+package: github.com/MarcosSegovia/goroutines/get-pairs
+import:
+- package: github.com/davecgh/go-spew
+  version: ^1.1.0
+  subpackages:
+  - spew

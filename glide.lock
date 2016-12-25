@@ -1,0 +1,8 @@
+hash: bb0b0434a5a6ed78a46fe7bd4cd48d53d22632e5549448d5dff5ec9674354e23
+updated: 2016-12-25T20:26:32.246319829+01:00
+imports:
+- name: github.com/davecgh/go-spew
+  version: 346938d642f2ec3594ed81d874461961cd0faa76
+  subpackages:
+  - spew
+testImports: []
