@@ -17,6 +17,9 @@ var tests = []testStruct{
 	{
 		StructForPairs{[]int64{1, 2, 4, 4}, 8}, true, []int64{4, 4},
 	},
+	{
+		StructForPairs{[]int64{1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 5}, 8}, true, []int64{3, 5},
+	},
 }
 
 func TestGetPairs(t *testing.T) {
@@ -33,13 +36,16 @@ func TestGetPairs(t *testing.T) {
 		}
 		if slice_of_ints == nil || structure.expected_slice_of_ints == nil {
 			t.Fatal("For", structure.tests.values,
-				"was expected", structure.expected_slice_of_ints)
+				"was expected", structure.expected_slice_of_ints,
+				"instead of", slice_of_ints,
+			)
 		}
 		for key := range slice_of_ints {
 			if slice_of_ints[key] != structure.expected_slice_of_ints[key] {
 				t.Error(
 					"For", structure.tests.values,
 					"was expected", structure.expected_slice_of_ints,
+					"instead of", slice_of_ints,
 				)
 			}
 		}
