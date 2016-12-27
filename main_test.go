@@ -32,7 +32,7 @@ func TestGetPairs(t *testing.T) {
 			)
 		}
 		if slice_of_ints == nil && structure.expected_slice_of_ints == nil {
-			return
+			continue
 		}
 		if slice_of_ints == nil || structure.expected_slice_of_ints == nil {
 			t.Fatal("For", structure.tests.values,
